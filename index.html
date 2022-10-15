@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random Team Generator</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      color: white;
+      font-family: arial;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #030016;
+    }
+
+    #judul {
+      margin: 0;
+      padding: 10px;
+      padding-left: 30px;
+      font-size: 30px;
+      border-bottom: 1px solid #444;
+      background-color: #010005;
+    }
+
+    .container {
+      padding: 20px 0;
+    }
+
+    .container .judul {
+      margin: 0 0 10px;
+      font-size: 25px;
+      position: relative;
+    }
+
+    button,
+    input {
+      background-color: #0000;
+      border: 2px solid #313659;
+      padding: 5px;
+      border-radius: 10px;
+      color: #616689;
+      font-size: 16px;
+    }
+
+    button:active {
+      background-color: #313659
+    }
+
+    #hasil>p span {
+      position: absolute;
+      right: 0;
+    }
+
+    .grey-div {
+      background-color: #313659;
+      border-radius: 10px;
+      padding: 15px;
+      width: 100%;
+    }
+
+    #hasil .kolom summary::marker {
+      color: seagreen;
+    }
+
+    #hasil .kolom ul {
+      margin: 0;
+    }
+
+    #jumlah-kelompok {
+      width: 50px;
+    }
+
+    .daftar {
+      border: none;
+      height: 200px;
+      margin-bottom: 10px;
+    }
+
+    @media (hover: hover) {
+      button:hover {
+        background-color: #313659
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <p id='judul'>Random Team Generator</p>
+  <form style='padding: 20px;' id='form'>
+    <div id='hasil' class='container'>
+      <p class='judul'>Kelompok Hasil<span id='salin-hasil' title='Salin'>&#10697;</span></p>
+      <div class='kolom grey-div'>
+      </div>
+    </div>
+    <label for='jumlah-kelompok'>Jumlah kelompok: </label>
+    <input type='number' min='2' id='jumlah-kelompok' required />
+    <div id='daftar-nama' class='container'>
+      <p class=judul>Daftar Nama<sup id='info-daftar-nama'>&#9432;</sup></p>
+      <div>
+        <textarea id='daftar1' class='daftar grey-div'></textarea>
+      </div>
+      <button id='tambah-daftar' type='button'><span style='color: seagreen'>+</span> Tambah daftar</button>
+      <button id='hapus-daftar' type='button'><span style='color: red'>-</span> Hapus daftar</button>
+    </div>
+    <button type='submit'>Buat</button>
+  </form>
+
+  <script type='module' src='main.js'></script>
+</body>
+
+</html>
